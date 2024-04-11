@@ -1,0 +1,38 @@
+﻿@model List<Skill>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Admins.cshtml";
+    int count = 0;
+}
+
+<div>
+    <h1 style="text-align:center;">Skill</h1>
+
+    <table class="table table-hover">
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Value</th>
+            
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.Title</td>
+                <td>@item.Values</td>
+
+                <td><a href="/Skill/UpdateSkill/@item.SkillId" class="btn btn-outline-warning">Update</a></td>
+                <td><a href="/Skill/DeleteSkill/@item.SkillId" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/Skill/CreateSkill" class="btn btn-outline-info">Add</a>
+</div>
+
+

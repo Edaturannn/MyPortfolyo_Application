@@ -1,0 +1,50 @@
+﻿@model List<ToDoList>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Admins.cshtml";
+    int count = 0;
+}
+
+<div>
+    <h1 style="text-align:center;">To Do List</h1>
+
+    <table class="table table-hover">
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>ImageUrl</th>
+            <th>Date</th>
+            <th>Text</th>
+            <th>Status</th>
+
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.Title</td>
+                <td>@item.ImageUrl</td>
+                <td>@item.Date</td>
+                <td>@item.Text</td>
+                <td>@item.Status</td>
+
+                <td><a href="/ToDoList/UpdateToDoList/@item.ToDoListId" class="btn btn-outline-warning">Update</a></td>
+                <td><a href="/ToDoList/DeleteToDoList/@item.ToDoListId" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/ToDoList/CreateToDoList" class="btn btn-outline-info">Add</a>
+</div>
+
+
+
+
+
+
+
+

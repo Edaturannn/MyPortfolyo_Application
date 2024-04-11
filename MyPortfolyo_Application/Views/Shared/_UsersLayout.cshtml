@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadComponentPartial")
+
+<body>
+
+    @await Component.InvokeAsync("_NavbarComponentPartial")
+
+  
+
+  <main id="main">
+
+        @await Component.InvokeAsync("_AboutComponentPartial")
+
+        @await Component.InvokeAsync("_WorkExperienceComponentPartial")
+
+        @await Component.InvokeAsync("_StatisticComponentPartial")
+        @await Component.InvokeAsync("_PortfolioComponentPartial")
+
+        @await Component.InvokeAsync("_TestimonialComponentPartial")
+
+        @RenderBody()
+
+  </main><!-- End #main -->
+    @await Component.InvokeAsync("_FooterComponentPartial")
+  
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+    @await Component.InvokeAsync("_ScriptComponentPartial")
+</body>
+
+</html>

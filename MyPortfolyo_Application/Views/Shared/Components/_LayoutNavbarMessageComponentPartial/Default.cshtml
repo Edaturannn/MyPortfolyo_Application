@@ -1,0 +1,22 @@
+﻿@model List<Message>
+<ul class="dropdown-menu notif-box" aria-labelledby="navbarDropdown">
+	<li>
+		@foreach (var item in Model)
+		{
+			<div class="notif-center">
+				<a href="/Message/Index">
+					<div class="notif-icon notif-primary">
+						<i class="la la-commenting"></i>
+					</div>
+					<div class="notif-content">
+						<span class="block">
+							@item.NameSurname
+						</span>
+
+					</div>
+				</a>
+				<a href="/Message/Index" class="btn btn-warning" style="color:white;"><b>@item.Subject</b></a>
+			</div>
+		}
+	</li>
+</ul>

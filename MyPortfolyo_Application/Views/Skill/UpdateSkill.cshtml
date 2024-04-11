@@ -1,0 +1,20 @@
+﻿@model Skill
+@{
+    ViewData["Title"] = "UpdateSkill";
+    Layout = "~/Views/Shared/_Admins.cshtml";
+}
+
+<h1 style="text-align:center;">Update</h1>
+<form method="post">
+    <input type="hidden" asp-for="SkillId"/>
+    <label>Title</label>
+    <input type="text" asp-for="Title" class="form-control" autocomplete="off" />
+    <br />
+
+    <label>Value</label>
+    <input type="number" asp-for="Values" class="form-control" autocomplete="off" />
+    <br />
+
+    <button class="btn btn-info">Update</button>
+</form>
+

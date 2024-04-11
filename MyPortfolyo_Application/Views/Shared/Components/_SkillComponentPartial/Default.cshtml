@@ -1,0 +1,11 @@
+﻿@model List<Skill>
+<div class="skill-mf">
+    <p class="title-s">Skill</p>
+    @foreach (var item in Model)
+    {
+        <span><b>@item.Title</b></span> <span class="pull-right">@item.Values %</span>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: @item.Values%;" aria-valuenow="@item.Values" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+    }
+</div>

@@ -1,0 +1,26 @@
+﻿@model WorkExperience
+@{
+    ViewData["Title"] = "UpdateWorkExperience";
+    Layout = "~/Views/Shared/_Admins.cshtml";
+}
+
+<h1 style="text-align:center;">Update</h1>
+<form method="post">
+    <input type="hidden" asp-for="WorkExperienceId"/>
+    <label>Head</label>
+    <input type="text" asp-for="Head" class="form-control" autocomplete="off" />
+    <br />
+
+    <label>Title</label>
+    <input type="text" asp-for="Title" class="form-control" autocomplete="off" />
+    <br />
+
+
+
+    <label>Description</label>
+    <textarea asp-for="Description" class="form-control" autocomplete="off" rows="5"></textarea>
+    <br />
+    <button class="btn btn-info">Update</button>
+</form>
+
+

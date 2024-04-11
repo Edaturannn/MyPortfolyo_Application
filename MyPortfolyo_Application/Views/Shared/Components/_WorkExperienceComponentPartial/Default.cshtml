@@ -1,0 +1,36 @@
+﻿@model List<WorkExperience>
+ <!-- ======= Services Section ======= -->
+<section id="services" class="services-mf pt-5 route">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="title-box text-center">
+                    <h3 class="title-a">
+                        EXPERIENCE
+
+                    </h3>
+              
+                    <div class="line-mf"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="service-box">
+                    <div class="service-ico">
+                        <span class="ico-circle"><i class="bi bi-briefcase"></i></span>
+                    </div>
+                    @foreach (var item in Model)
+                    {
+                        <div class="service-content">
+                            <h2 class="s-title">@item.Head</h2>
+                            <p class="s-description text-center">
+                                @item.Description
+                            </p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- End Services Section -->

@@ -1,0 +1,22 @@
+﻿@model About
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Views/Shared/_Admins.cshtml";
+}
+
+<h1 style="text-align:center;">New Add</h1>
+<form method="post">
+    <label>Title</label>
+    <input type="text" asp-for="Title" class="form-control" autocomplete="off" />
+    <br />
+
+    <label>SubDescription</label>
+    <input type="text" asp-for="SubDescription" class="form-control" autocomplete="off" />
+    <br />
+
+    <label>Details</label>
+    <textarea type="text" asp-for="Details" class="form-control" autocomplete="off" rows="5"></textarea>
+    <br />
+    <button class="btn btn-info">Create</button>
+</form>
+

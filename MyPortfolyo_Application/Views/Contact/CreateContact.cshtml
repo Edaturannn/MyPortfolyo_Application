@@ -1,0 +1,38 @@
+﻿@model Contact
+@{
+    ViewData["Title"] = "CreateContact";
+    Layout = "~/Views/Shared/_Admins.cshtml";
+}
+
+<h1 style="text-align:center;">New Add</h1>
+<form method="post">
+    <label>Title</label>
+    <input type="text" asp-for="Title" class="form-control" autocomplete="off" />
+    <br />
+
+    <label>Description</label>
+    <input type="text" asp-for="Description" class="form-control" autocomplete="off" />
+    <br />
+
+    <label>Phone1</label>
+    <input type="number" asp-for="Phone1" class="form-control" autocomplete="off" />
+    <br />
+
+    <label>Phone2</label>
+    <input type="number" asp-for="Phone2" class="form-control" autocomplete="off" />
+    <br />
+
+    <label>Email1</label>
+    <input type="email" asp-for="Email1" class="form-control" autocomplete="off" />
+    <br />
+
+    <label>Email2</label>
+    <input type="email" asp-for="Email2" class="form-control" autocomplete="off" />
+    <br />
+
+    <label>Address</label>
+    <textarea type="text" asp-for="Address" class="form-control" rows="5" autocomplete="off"></textarea>
+    <br />
+    <button class="btn btn-info">Create</button>
+</form>
+

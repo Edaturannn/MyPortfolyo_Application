@@ -1,0 +1,20 @@
+﻿@model List<ToDoList>
+<ul class="dropdown-menu notif-box" aria-labelledby="navbarDropdown">
+	<li>
+	@foreach (var item in Model)
+	{
+			<div class="notif-center">
+				<a href="/ToDoList/Index">
+					<div class="notif-icon notif-primary"> <i class="la la-edit"></i> </div>
+					<div class="notif-content">
+						<span class="block">
+							@item.Text
+						</span>
+					
+					</div>
+				</a>
+				<a href="/ToDoList/ChangeStatusToDoList/@item.ToDoListId" class="btn btn-info" style="color:white;"><b>@item.Status</b></a>
+			</div>
+	}
+	</li>
+</ul>

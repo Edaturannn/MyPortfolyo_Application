@@ -1,0 +1,46 @@
+﻿@model List<WorkExperience>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Admins.cshtml";
+    int count = 0;
+}
+
+<div>
+    <h1 style="text-align:center;">Work Experience</h1>
+
+    <table class="table table-hover">
+        <tr>
+            <th>#</th>
+            <th>Head</th>
+            <th>Title</th>
+            <th>SendDate</th>
+            <th>Description</th>
+
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.Head</td>
+                <td>@item.Title</td>
+                <td>@item.SendDate</td>
+                <td>@item.Description</td>
+
+                <td><a href="/WorkExperience/UpdateWorkExperience/@item.WorkExperienceId" class="btn btn-outline-warning">Update</a></td>
+                <td><a href="/WorkExperience/DeleteWorkExperience/@item.WorkExperienceId" class="btn btn-outline-danger">Delete</a></td>
+            </tr>
+        }
+    </table>
+    <br />
+    <a href="/WorkExperience/CreateWorkExperience" class="btn btn-outline-info">Add</a>
+</div>
+
+
+
+
+
+
