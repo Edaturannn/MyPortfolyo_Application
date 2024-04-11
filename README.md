@@ -1,7 +1,9 @@
 Proje geliştirilirken aşağıdaki teknolojiler ve kütüphaneler kullanıldı:
 🛠️ ASP.NET Core (7.0)
 🛠️ Microsoft.Entity.FrameworkCore (7.0.17)
-🛠️ Microsoft.Entity.FrameworkCore.PostgreSQL (7.0.17) 
+🛠️ Microsoft.EntityFrameworkCore.Design (7.0.17) 
+🛠️ Microsoft.EntityFrameworkCore.SqlServer (7.0.17) 
+🛠️ Microsoft.EntityFrameworkCore.Tools (7.0.17) 
 🛠️ Layout Kontrolü
 🛠️ Controller Yapısı
 🛠️ View Components ile Partial View Kullanımı
